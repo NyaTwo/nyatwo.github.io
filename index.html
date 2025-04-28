@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artisan Textures | Digital Art & 3D Texture Commissions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #6e8efb 0%, #a777e3 100%);
+        }
+        .texture-card {
+            transition: all 0.3s ease;
+            background-size: cover;
+            background-position: center;
+        }
+        .texture-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .commission-card {
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        .commission-card:hover {
+            transform: scale(1.03);
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #a777e3;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .floating {
+            animation: floating 6s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-100 font-sans">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-gray-900 bg-opacity-90 z-50 border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <span class="text-xl font-bold bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent">ARTISAN TEXTURES</span>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="nav-link px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                        <a href="#portfolio" class="nav-link px-3 py-2 rounded-md text-sm font-medium">Portfolio</a>
+                        <a href="#commissions" class="nav-link px-3 py-2 rounded-md text-sm font-medium">Commissions</a>
+                        <a href="#pricing" class="nav-link px-3 py-2 rounded-md text-sm font-medium">Pricing</a>
+                        <a href="#contact" class="nav-link px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button class="mobile-menu-button p-2 rounded-md text-gray-400 hover:text-white focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu hidden md:hidden fixed inset-0 z-40 bg-gray-900 bg-opacity-90 pt-16">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-center">
+            <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium w-full text-center">Home</a>
+            <a href="#portfolio" class="block px-3 py-2 rounded-md text-base font-medium w-full text-center">Portfolio</a>
+            <a href="#commissions" class="block px-3 py-2 rounded-md text-base font-medium w-full text-center">Commissions</a>
+            <a href="#pricing" class="block px-3 py-2 rounded-md text-base font-medium w-full text-center">Pricing</a>
+            <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium w-full text-center">Contact</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient min-h-screen flex items-center justify-center pt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-6xl font-bold mb-6">Digital Art & <span class="bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-pink-500">3D Textures</span></h1>
+                    <p class="text-xl md:text-2xl mb-8 opacity-90">Custom high-quality textures and digital artwork for your creative projects. Handcrafted with attention to detail.</p>
+                    <div class="flex space-x-4">
+                        <a href="#commissions" class="px-8 py-3 bg-white text-gray-900 font-bold rounded-full hover:bg-gray-200 transition duration-300">Order Now</a>
+                        <a href="#portfolio" class="px-8 py-3 border-2 border-white text-white font-bold rounded-full hover:bg-white hover:text-gray-900 transition duration-300">View Portfolio</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative w-80 h-80 md:w-96 md:h-96">
+                        <div class="absolute inset-0 bg-gradient-to-br from-purple-500 to-blue-600 rounded-3xl transform rotate-6 floating"></div>
+                        <div class="absolute inset-0 bg-gradient-to-br from-pink-500 to-purple-600 rounded-3xl transform -rotate-6 floating" style="animation-delay: 0.5s;"></div>
+                        <div class="absolute inset-0 bg-gray-900 rounded-3xl overflow-hidden flex items-center justify-center">
+                            <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1064&q=80" alt="3D Texture Example" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Recent Work</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Explore my latest digital artwork and 3D texture creations for games, animations, and architectural visualization.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <!-- Texture 1 -->
+                <div class="texture-card rounded-xl overflow-hidden h-64" style="background-image: url('https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');">
+                    <div class="bg-gradient-to-t from-black to-transparent h-full flex flex-col justify-end p-6 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                        <h3 class="text-xl font-bold text-white">Sci-Fi Metal Plates</h3>
+                        <p class="text-gray-300">4K PBR texture set</p>
+                    </div>
+                </div>
+                
+                <!-- Texture 2 -->
+                <div class="texture-card rounded-xl overflow-hidden h-64" style="background-image: url('https://images.unsplash.com/photo-1639762681057-408e52192e55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80');">
+                    <div class="bg-gradient-to-t from-black to-transparent h-full flex flex-col justify-end p-6 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                        <h3 class="text-xl font-bold text-white">Ancient Stone Wall</h3>
+                        <p class="text-gray-300">Seamless modular texture</p>
+                    </div>
+                </div>
+                
+                <!-- Texture 3 -->
+                <div class="texture-card rounded-xl overflow-hidden h-64" style="background-image: url('https://images.unsplash.com/photo-1639762681485-0741d88f1daf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');">
+                    <div class="bg-gradient-to-t from-black to-transparent h-full flex flex-col justify-end p-6 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                        <h3 class="text-xl font-bold text-white">Fantasy Fabric</h3>
+                        <p class="text-gray-300">Procedural material</p>
+                    </div>
+                </div>
+                
+                <!-- Texture 4 -->
+                <div class="texture-card rounded-xl overflow-hidden h-64" style="background-image: url('https://images.unsplash.com/photo-1639762681057-408e52192e55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80');">
+                    <div class="bg-gradient-to-t from-black to-transparent h-full flex flex-col justify-end p-6 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                        <h3 class="text-xl font-bold text-white">Weathered Wood</h3>
+                        <p class="text-gray-300">4K PBR texture set</p>
+                    </div>
+                </div>
+                
+                <!-- Texture 5 -->
+                <div class="texture-card rounded-xl overflow-hidden h-64" style="background-image: url('https://images.unsplash.com/photo-1639762681057-408e52192e55?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80');">
+                    <div class="bg-gradient-to-t from-black to-transparent h-full flex flex-col justify-end p-6 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                        <h3 class="text-xl font-bold text-white">Cyberpunk Neon</h3>
+                        <p class="text-gray-300">Emission textures</p>
+                    </div>
+                </div>
+                
+                <!-- Texture 6 -->
+                <div class="texture-card rounded-xl overflow-hidden h-64" style="background-image: url('https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');">
+                    <div class="bg-gradient-to-t from-black to-transparent h-full flex flex-col justify-end p-6 opacity-0 hover:opacity-100 transition-opacity duration-300">
+                        <h3 class="text-xl font-bold text-white">Organic Tissue</h3>
+                        <p class="text-gray-300">Biomechanical textures</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <a href="#" class="inline-flex items-center px-6 py-3 border border-gray-700 text-gray-300 rounded-full hover:bg-gray-800 transition duration-300">
+                    View Full Portfolio
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Commissions Section -->
+    <section id="commissions" class="py-20 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Commission Services</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Custom digital artwork and 3D textures tailored to your project's needs.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Digital Art Commission -->
+                <div class="commission-card p-8 rounded-2xl border border-gray-700">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-r from-purple-500 to-blue-600 flex items-center justify-center mr-4">
+                            <i class="fas fa-paint-brush text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold">Digital Art</h3>
+                    </div>
+                    <p class="text-gray-300 mb-6">Custom illustrations, character designs, concept art, and promotional artwork for your projects.</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                            <span>High-resolution digital paintings</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                            <span>Character concept sheets</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                            <span>Environment concepts</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                            <span>Multiple revisions included</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="block w-full py-3 px-6 text-center bg-gradient-to-r from-purple-500 to-blue-600 rounded-full font-bold hover:opacity-90 transition duration-300">Inquire Now</a>
+                </div>
+                
+                <!-- 3D Texture Commission -->
+                <div class="commission-card p-8 rounded-2xl border border-gray-700">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 rounded-full bg-gradient-to-r from-pink-500 to-purple-600 flex items-center justify-center mr-4">
+                            <i class="fas fa-cube text-2xl text-white"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold">3D Textures</h3>
+                    </div>
+                    <p class="text-gray-300 mb-6">Custom PBR textures, material sets, and procedural materials for game development and 3D rendering.</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                            <span>Physically Based Rendering (PBR) textures</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                            <span>Seamless tileable textures</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                            <span>Substance Painter/Designer files</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-green-400 mr-2"></i>
+                            <span>Custom material libraries</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="block w-full py-3 px-6 text-center bg-gradient-to-r from-pink-500 to-purple-600 rounded-full font-bold hover:opacity-90 transition duration-300">Inquire Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Pricing Plans</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Flexible pricing options for different project needs and budgets.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Basic Plan -->
+                <div class="bg-gray-800 rounded-xl overflow-hidden border border-gray-700 transform hover:scale-105 transition duration-300">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-2">Basic</h3>
+                        <p class="text-gray-400 mb-6">For small projects and indie developers</p>
+                        <div class="text-4xl font-bold mb-6">$50<span class="text-lg text-gray-400">/texture</span></div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-400 mr-2"></i>
+                                <span>1K resolution textures</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-400 mr-2"></i>
+                                <span>Basic PBR maps (Albedo, Normal, Roughness)</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-400 mr-2"></i>
+                                <span>1 revision included</span>
+                            </li>
+                            <li class="flex items-center text-gray-500">
+                                <i class="fas fa-times text-red-400 mr-2"></i>
+                                <span>No source files</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="block w-full py-3 px-6 text-center bg-gray-700 rounded-full font-bold hover:bg-gray-600 transition duration-300">Get Started</a>
+                    </div>
+                </div>
+                
+                <!-- Professional Plan -->
+                <div class="bg-gradient-to-b from-purple-900 to-gray-800 rounded-xl overflow-hidden border border-purple-700 transform hover:scale-105 transition duration-300">
+                    <div class="p-8">
+                        <div class="flex justify-between items-start">
+                            <div>
+                                <h3 class="text-2xl font-bold mb-2">Professional</h3>
+                                <p class="text-gray-300 mb-6">For serious projects and studios</p>
+                            </div>
+                            <span class="bg-purple-600 text-xs font-bold px-3 py-1 rounded-full">POPULAR</span>
+                        </div>
+                        <div class="text-4xl font-bold mb-6">$120<span class="text-lg text-gray-300">/texture</span></div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-400 mr-2"></i>
+                                <span>4K resolution textures</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-400 mr-2"></i>
+                                <span>Full PBR maps (Albedo, Normal, Roughness, Metalness, AO)</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-400 mr-2"></i>
+                                <span>3 revisions included</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-400 mr-2"></i>
+                                <span>Source files included</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="block w-full py-3 px-6 text-center bg-gradient-to-r from-purple-500 to-blue-600 rounded-full font-bold hover:opacity-90 transition duration-300">Get Started</a>
+                    </div>
+                </div>
+                
+                <!-- Custom Plan -->
+                <div class="bg-gray-800 rounded-xl overflow-hidden border border-gray-700 transform hover:scale-105 transition duration-300">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-2">Custom</h3>
+                        <p class="text-gray-400 mb-6">For complex or bulk projects</p>
+                        <div class="text-4xl font-bold mb-6">Custom<span class="text-lg text-gray-400">/quote</span></div>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-400 mr-2"></i>
+                                <span>8K resolution available</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-400 mr-2"></i>
+                                <span>Custom material libraries</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-400 mr-2"></i>
+                                <span>Unlimited revisions</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check text-green-400 mr-2"></i>
+                                <span>Bulk discounts available</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="block w-full py-3 px-6 text-center bg-gray-700 rounded-full font-bold hover:bg-gray-600 transition duration-300">Contact for Quote</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16 bg-gray-800 rounded-xl p-8 border border-gray-700">
+                <h3 class="text-2xl font-bold mb-4">Digital Art Pricing</h3>
+                <p class="text-gray-400 mb-6">Illustration and concept art pricing varies based on complexity and usage rights. Below are starting prices:</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-gray-700 p-6 rounded-lg">
+                        <h4 class="font-bold mb-2">Character Design</h4>
+                        <p class="text-gray-400 mb-4">Starting at $150</p>
+                        <ul class="space-y-2 text-sm text-gray-300">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-400 mr-2 mt-1"></i>
+                                <span>Front view with basic colors</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-400 mr-2 mt-1"></i>
+                                <span>Simple background</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-gray-700 p-6 rounded-lg">
+                        <h4 class="font-bold mb-2">Environment Concept</h4>
+                        <p class="text-gray-400 mb-4">Starting at $200</p>
+                        <ul class="space-y-2 text-sm text-gray-300">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-400 mr-2 mt-1"></i>
+                                <span>Detailed landscape or interior</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-400 mr-2 mt-1"></i>
+                                <span>Mood and lighting studies</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-gray-700 p-6 rounded-lg">
+                        <h4 class="font-bold mb-2">Full Illustration</h4>
+                        <p class="text-gray-400 mb-4">Starting at $300</p>
+                        <ul class="space-y-2 text-sm text-gray-300">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-400 mr-2 mt-1"></i>
+                                <span>Detailed characters and environment</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-400 mr-2 mt-1"></i>
+                                <span>Complete rendered artwork</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Client Testimonials</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">What my clients say about working with me.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-700 p-8 rounded-xl">
+                    <div class="flex items-center mb-6">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Sarah Johnson</h4>
+                            <p class="text-gray-400 text-sm">Game Developer at Neon Studios</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-4">"The sci-fi textures I commissioned were absolutely perfect for our game. The attention to detail and the quality of the PBR maps saved us weeks of development time."</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-700 p-8 rounded-xl">
+                    <div class="flex items-center mb-6">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Michael Chen</h4>
+                            <p class="text-gray-400 text-sm">3D Artist</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-4">"I've ordered several texture packs and they've all been exceptional. The seamless tiling is flawless and the material definitions work perfectly in Substance Painter."</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-700 p-8 rounded-xl">
+                    <div class="flex items-center mb-6">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Client" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Emma Rodriguez</h4>
+                            <p class="text-gray-400 text-sm">Indie Game Developer</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-4">"The character concept art exceeded my expectations. The artist perfectly captured the essence of my game's protagonist and delivered multiple variations to choose from."</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">Ready to discuss your project? Send me a message and I'll get back to you within 24 hours.</p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <div class="bg-gray-800 p-8 rounded-xl">
+                        <h3 class="text-xl font-bold mb-6">Contact Information</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-purple-600 p-3 rounded-lg mr-4">
+                                    <i class="fas fa-envelope text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Email</h4>
+                                    <p class="text-gray-400">commissions@artisantextures.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-600 p-3 rounded-lg mr-4">
+                                    <i class="fab fa-discord text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">Discord</h4>
+                                    <p class="text-gray-400">ArtisanTextures#1234</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-pink-600 p-3 rounded-lg mr-4">
+                                    <i class="fab fa-artstation text-white"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold mb-1">ArtStation</h4>
+                                    <p class="text-gray-400">artstation.com/artisantextures</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-10">
+                            <h3 class="text-xl font-bold mb-6">Frequently Asked Questions</h3>
+                            
+                            <div class="space-y-4">
+                                <div class="border-b border-gray-700 pb-4">
+                                    <button class="faq-toggle flex items-center justify-between w-full text-left">
+                                        <span class="font-medium">What file formats do you provide?</span>
+                                        <i class="fas fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+                                    </button>
+                                    <div class="faq-content hidden mt-2 text-gray-400">
+                                        <p>For textures, I typically provide PNG or TGA files for color maps, and EXR for HDR textures. Source files in PSD, SBSAR (Substance), or BLEND (Blender) formats are available in Professional and Custom plans.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="border-b border-gray-700 pb-4">
+                                    <button class="faq-toggle flex items-center justify-between w-full text-left">
+                                        <span class="font-medium">What's your typical turnaround time?</span>
+                                        <i class="fas fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+                                    </button>
+                                    <div class="faq-content hidden mt-2 text-gray-400">
+                                        <p>Simple textures can be delivered in 2-3 days. Complex textures or digital art pieces typically take 1-2 weeks depending on complexity and current workload. Rush services are available for an additional fee.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="border-b border-gray-700 pb-4">
+                                    <button class="faq-toggle flex items-center justify-between w-full text-left">
+                                        <span class="font-medium">Do you offer commercial licenses?</span>
+                                        <i class="fas fa-chevron-down text-gray-400 transition-transform duration-300"></i>
+                                    </button>
+                                    <div class="faq-content hidden mt-2 text-gray-400">
+                                        <p>Yes, all commissioned work includes a commercial license unless otherwise specified. You're free to use the assets in commercial projects, though I retain the right to display the work in my portfolio.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2">
+                    <form class="bg-gray-800 p-8 rounded-xl">
+                        <div class="mb-6">
+                            <label for="name" class="block text-gray-300 mb-2">Your Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="email" class="block text-gray-300 mb-2">Email Address</label>
+                            <input type="email" id="email" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="service" class="block text-gray-300 mb-2">Service Needed</label>
+                            <select id="service" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                                <option value="">Select a service</option>
+                                <option value="texture">3D Texture Commission</option>
+                                <option value="digital-art">Digital Art Commission</option>
+                                <option value="both">Both Services</option>
+                                <option value="other">Other Inquiry</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="budget" class="block text-gray-300 mb-2">Budget Range</label>
+                            <select id="budget" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500">
+                                <option value="">Select budget range</option>
+                                <option value="50-100">$50 - $100</option>
+                                <option value="100-300">$100 - $300</option>
+                                <option value="300-500">$300 - $500</option>
+                                <option value="500+">$500+</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-300 mb-2">Project Details</label>
+                            <textarea id="message" rows="6" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"></textarea>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <label for="reference" class="block text-gray-300 mb-2">Reference Images (Optional)</label>
+                            <div class="border-2 border-dashed border-gray-600 rounded-lg p-8 text-center">
+                                <i class="fas fa-cloud-upload-alt text-3xl text-gray-500 mb-2"></i>
+                                <p class="text-gray-400">Drag & drop files here or click to browse</p>
+                                <input type="file" id="reference" class="hidden" multiple>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="w-full py-4 px-6 bg-gradient-to-r from-purple-500 to-blue-600 rounded-full font-bold hover:opacity-90 transition duration-300">
+                            Send Message
+                            <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-blue-500 bg-clip-text text-transparent">ARTISAN TEXTURES</h3>
+                    <p class="text-gray-400">Creating high-quality digital art and 3D textures for games, films, and architectural visualization.</p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Services</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">3D Texture Commissions</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Digital Art Commissions</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Texture Pack Creation</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Material Design</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Free Textures</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Tutorials</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Connect</h4>
+                    <div class="flex space-x-4 mb-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-purple-600 transition">
+                            <i class="fab fa-artstation"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-500 transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pink-600 transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-blue-400 transition">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                    <p class="text-gray-400">Subscribe to my newsletter</p>
+                    <div class="mt-2 flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 bg-gray-800 rounded-l-lg focus:outline-none focus:ring-1 focus:ring-purple-500 w-full">
+                        <button class="bg-purple-600 px-4 rounded-r-lg hover:bg-purple-700 transition">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-500 text-sm mb-4 md:mb-0">© 2023 Artisan Textures. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-500 hover:text-gray-300 text-sm">Privacy Policy</a>
+                    <a href="#" class="text-gray-500 hover:text-gray-300 text-sm">Terms of Service</a>
+                    <a href="#" class="text-gray-500 hover:text-gray-300 text-sm">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when clicking on a link
+        const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        
+        // FAQ toggle functionality
+        const faqToggles = document.querySelectorAll('.faq-toggle');
+        faqToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                const content = toggle.nextElementSibling;
+                const icon = toggle.querySelector('i');
+                
+                content.classList.toggle('hidden');
+                icon.classList.toggle('transform');
+                icon.classList.toggle('rotate-180');
+            });
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Form submission (would be connected to backend in real implementation)
+        const contactForm = document.querySelector('form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // In a real implementation, this would send the form data to a server
+                alert('Thank you for your message! I will get back to you soon.');
+                this.reset();
+            });
+        }
+    </script>
+</body>
+</html>
